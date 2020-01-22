@@ -8,6 +8,15 @@ how to test:
 
 1. visit http://originsite.azurewebsites.net/setcookies/ to set cookies
 1. visit http://originsite.azurewebsites.net/readcookies/ to see that cookies have been set
+
+    ```
+    Cookie: 
+    StrictCookie=This cookie was set with SameSite "Strict"; 
+    NoneCookie=This cookie was set with SameSite "None"; 
+    DefaultCookie=This cookie was not set with a SameSite policy; 
+    LaxCookie=This cookie was set with SameSite "Lax"
+    ```
+
 1. run A locally:
 
     ```
@@ -21,7 +30,11 @@ how to test:
 5. see what cookies have been set. In our test, we saw 
 
 ```
-Cookie: StrictCookie=This cookie was set with SameSite "Strict"; NoneCookie=This cookie was set with SameSite "None"; DefaultCookie=This cookie was not set with a SameSite policy; LaxCookie=This cookie was set with SameSite "Lax"
+Cookie: 
+NoneCookie=This cookie was set with SameSite "None"; 
+DefaultCookie=This cookie was not set with a SameSite policy; 
+LaxCookie=This cookie was set with SameSite "Lax"
 ```
 
+ie. everything apart from the strict cookie is set
   
